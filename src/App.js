@@ -2,19 +2,17 @@ import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { CycleRaycast, softShadows } from '@react-three/drei';
 
+import Hero from './components/Hero';
 import Stage from './components/Stage';
 import Stair from './components/Stair';
 
 export default function App() {
   const [{ objects, cycle }, set] = useState({ objects: [], cycle: 0 });
+  console.log(objects, cycle);
 
   return (
     <>
-      {/* CycleRaycast's status data can now be turned into informative HTML */}
-      <div className="status">
-        {objects.map((_, i) => (<div key={i} className="dot" style={{ background: i === cycle ? '#70ffd0' : '#ccc' }} />)) /* prettier-ignore */}
-        {objects.length ? <div className="name" style={{ left: cycle * 14, padding: 2 }} children={objects[cycle].object.name} /> : null}
-      </div>
+      <Hero />
       <Canvas shadows dpr={1.5} camera={{ position: [-10, 10, 5], fov: 50 }}>
         <Stage />
         {Array.from({ length: 12 }, (_, i) => (
