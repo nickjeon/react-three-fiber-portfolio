@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Single Page Portfolio Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Dependencies
+- React
+- Three.JS
+- React-Three-Fiber
+- Drei
+
+![Nicholas Jeon](https://user-images.githubusercontent.com/105236273/198106629-aeebfc97-e409-41f4-ade9-a384d1e26f39.png)
 
 ## Available Scripts
 
